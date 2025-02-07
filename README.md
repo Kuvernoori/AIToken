@@ -1,7 +1,7 @@
-AI Model Marketplace 
+## AI Model Marketplace 
 A decentralized marketplace for AI models built on Ethereum using smart contracts. Users can list, purchase, rate AI models, and creators can withdraw earnings. Powered by Truffle for smart contract development and Web3.js for Ethereum interaction.
 
-Features
+## Features
 List AI Models: Add AI models with a name, description, and price.
 Purchase Models: Securely buy models with AITU Tokens.
 Rate Models: Leave ratings (1 to 5 stars) after purchase.
@@ -49,17 +49,12 @@ The deployment script utilizes Hardhat to deploy the contract on the Sepolia tes
 - Deploys `AITU2329` contract
 - Outputs contract address upon successful deployment
 
-
-
-![](output.jpg)
-
-### Key Details:
-- **Deployer Address:** Shown in the output log.
-- **Transaction Hash:** Contains the transaction ID of the deployment.
-- **Contract Address:** Displays the address of the deployed smart contract.
-- **Gas Used:** Indicates the amount of gas consumed during deployment.
-- **Block Confirmation:** Shows the block number where the contract was deployed.
-- **Deployment Success Message:** Confirms successful deployment.
-
 ## License
 This project is licensed under the MIT License. See the [LICENSE](LICENCE) file for details.
+
+## Examples
+![](aiModels.jpg)
+![](Create.jpg)
+![](Send.jpg)
+![](etherscan.jpg)
+![](Details.jpg)
