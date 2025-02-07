@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Models Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web3/1.6.1/web3.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>AI Models</h1>
+        <div id="wallet-info">
+            <div id="walletAddress">Wallet adress: </div>
+            <div id="tokenBalance">Balance: 0 AITU</div>
+            <button id="connectButton">Connect to your MetaMask</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="models-section">
+            <h2>Available AI Models</h2>
+            <div id="models-list" class="models-container">
+                <!-- Dynamic content will be inserted here -->
+            </div>
+        </section>
+
+        <section class="create-model-section">
+            <h2>Create</h2>
+            <form id="create-model-form">
+                <label for="model-name">Model Name</label>
+                <input type="text" id="model-name" placeholder="model name" required>
+
+                <label for="model-description">Model Description</label>
+                <textarea id="model-description" placeholder="model description" required></textarea>
+
+                <label for="model-price">Price (in AITU)</label>
+                <input type="number" id="model-price" placeholder="model price" required>
+
+                <label for="model-url">Model URL</label>
+                <input type="url" id="model-url" placeholder="model URL" required>
+
+                <button type="submit">Listing</button>
+            </form>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
