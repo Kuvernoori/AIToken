@@ -1,4 +1,4 @@
-/* General Styles */
+
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
@@ -36,7 +36,7 @@ header {
     background-color: #a50000;
 }
 
-/* Main Content */
+
 main {
     padding: 40px;
 }
@@ -53,7 +53,7 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Центрирование заголовка и моделей */
+
 .models-section {
     text-align: center;
     margin-bottom: 40px;
@@ -63,7 +63,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: center; /* Центрирование всех моделей */
+    justify-content: center; 
     max-width: 1000px;
     margin: 0 auto;
 }
@@ -73,7 +73,7 @@ h2 {
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
-    width: 280px; /* Контролируемая ширина */
+    width: 280px; 
     box-sizing: border-box;
 }
 
@@ -84,7 +84,7 @@ h2 {
 
 @media screen and (max-width: 768px) {
     .model-item {
-        width: 100%; /* Полная ширина на мобильных */
+        width: 100%; 
     }
 }
 
@@ -102,7 +102,7 @@ button:hover {
     background-color: #a50000;
 }
 
-/* Form Section */
+
 form {
     background-color: #1f1f1f;
     padding: 30px;
