@@ -4,9 +4,7 @@ A decentralized marketplace for AI models built on Ethereum using smart contract
 ## Features
 List AI Models: Add AI models with a name, description, and price.
 Purchase Models: Securely buy models with AITU Tokens.
-Rate Models: Leave ratings (1 to 5 stars) after purchase.
 View Model Details: Explore name, description, price.
-
 
 ## Key Features
 
@@ -37,10 +35,11 @@ npm install
 ```
 3. Set up the Smart Contract
 - Deploy the smart contract to the Ethereum network (use a test network like Sepolia for testing).
-- Make sure the contract ABI and address are updated in the front-end code (app.js).
-4. Start the Backend Server
-- Run the backend server to handle model uploads and serve API requests:
+4. Start server
+- Run the server to handle model uploads and serve API requests:
+```
 node server.js
+```
 - This will start the server on http://localhost:3000.
 
 ### `scripts/deploy.js`
