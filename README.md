@@ -1,24 +1,12 @@
-# BT3 Project - Blockchain-Based Financial System
+AI Model Marketplace 
+A decentralized marketplace for AI models built on Ethereum using smart contracts. Users can list, purchase, rate AI models, and creators can withdraw earnings. Powered by Truffle for smart contract development and Web3.js for Ethereum interaction.
 
-This repository contains the BT3 project, which focuses on blockchain-based financial solutions utilizing ERC-20 token functionalities. The project demonstrates smart contract implementation on the Sepolia testnet and includes additional utilities for tracking and managing transaction details.
+Features
+List AI Models: Add AI models with a name, description, and price.
+Purchase Models: Securely buy models with AITU Tokens.
+Rate Models: Leave ratings (1 to 5 stars) after purchase.
+View Model Details: Explore name, description, price.
 
-## Table of Contents
-
-- [Project Overview](#project-overview)
-- [Key Features](#key-features)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contracts](#contracts)
-- [Scripts](#scripts)
-- [Tests](#tests)
-- [Deployment Output](#deployment-output)
-- [Examples](#examples)
-- [License](#license)
-
-## Project Overview
-
-The BT3 project involves the creation of an ERC-20-compliant token with enhanced features for monitoring transactions on the blockchain. This project serves as a demonstration for token deployment, smart contract functions, and blockchain integration using development tools like Hardhat and MetaMask.
 
 ## Key Features
 
@@ -40,90 +28,19 @@ Ensure the following dependencies are installed before starting:
 
 ## Installation
 
-1. Clone the repository:
+Setup
+1. Clone the repository
+2. Install dependencies
+- Navigate to the project directory and run the following command to install the required packages:
 
-   ```sh
-   git clone https://github.com/Kuvernoori/BT3.git
-   cd BT3
-   ```
-
-2. Install dependencies:
-
-   ```sh
-   npm install
-   ```
-
-3. Set up environment variables:
-   
-    Create a `.env` file in the root directory and add the following:
-    ```
-      url: process.env.QUICKNODE_URL,
-      accounts: [process.env.PRIVATE_KEY],
-    ```
-
-## Usage
-
-### Compile the Contract
-
-```sh
-npx hardhat compile
-```
-
-### Deploy the Contract to Sepolia
-
-```sh
-npx hardhat run scripts/deploy.js --network sepolia
-```
-
-
-### Interact with the Contract
-
-Start the Hardhat console and attach to the deployed contract:
-
-```sh
-npx hardhat console --network sepolia
-```
-
-```javascript
-const contractAddress = "0xYourContractAddress";
-const AITU2329 = await ethers.getContractFactory("AITU2329");
-const token = await AITU2329.attach(contractAddress);
-```
-
-#### Example Interactions
-
-- **Get the latest transaction timestamp:**
-  ```javascript
-  const timestamp = await token.getLatestTransactionTimestamp();
-  console.log("Latest Transaction Timestamp:", timestamp);
-  ```
-
-- **Retrieve transaction sender:**
-  ```javascript
-  const sender = await token.getTransactionSender();
-  console.log("Transaction Sender:", sender);
-  ```
-
-- **Retrieve transaction receiver:**
-  ```javascript
-  const receiver = await token.getTransactionReceiver("0xReceiverAddress");
-  console.log("Transaction Receiver:", receiver);
-  ```
-  
-
-## Contracts
-
-### AITU2329.sol
-This is the main ERC-20 smart contract implementing additional transaction tracking features.
-- Functions include:
-  - `getLatestTransactionTimestamp()`
-  - `getTransactionSender()`
-  - `getTransactionReceiver()`
-
-### AITU2329modif.sol
-Modified version of `AITU2329.sol` with added functionality for transaction event emissions and initial supply customization.
-
-## Scripts
+npm install
+3. Set up the Smart Contract
+- Deploy the smart contract to the Ethereum network (use a test network like Sepolia for testing).
+- Make sure the contract ABI and address are updated in the front-end code (app.js).
+4. Start the Backend Server
+- Run the backend server to handle model uploads and serve API requests:
+node server.js
+- This will start the server on http://localhost:3000.
 
 ### `scripts/deploy.js`
 The deployment script utilizes Hardhat to deploy the contract on the Sepolia testnet.
@@ -132,21 +49,7 @@ The deployment script utilizes Hardhat to deploy the contract on the Sepolia tes
 - Deploys `AITU2329` contract
 - Outputs contract address upon successful deployment
 
-## Tests
 
-### `test/AITU2329.js`
-Unit tests for the `AITU2329` contract, including:
-- Checking initial supply
-- Validating event emissions (`TransactionDetails`)
-- Retrieving latest transaction timestamp
-- Getting sender and receiver details
-
-### `test/AITU2329modif.js`
-Modified tests for `AITU2329modif` contract with additional initial supply verification.
-
-## Deployment Output
-
-The output from the deployment script is shown in `output.jpg`:
 
 ![](output.jpg)
 
