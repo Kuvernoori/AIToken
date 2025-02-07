@@ -32,8 +32,9 @@ Setup
 1. Clone the repository
 2. Install dependencies
 - Navigate to the project directory and run the following command to install the required packages:
-
+```
 npm install
+```
 3. Set up the Smart Contract
 - Deploy the smart contract to the Ethereum network (use a test network like Sepolia for testing).
 - Make sure the contract ABI and address are updated in the front-end code (app.js).
